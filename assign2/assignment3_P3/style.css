@@ -121,4 +121,12 @@ nav ul {
     margin: 0;
 }
 
+nav li {
+    display: block; 
+    margin-bottom: 50px; 
+    padding: 10px; 
+    border: 1px solid #e73e3e; 
+    border-radius: 5px; 
+  }
+  
 
