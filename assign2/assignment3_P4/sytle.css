@@ -42,6 +42,7 @@ body {
     padding: 0;
     list-style: none;
     display: flex;
+    justify-content: space-between;
   }
   
   nav a {
@@ -60,4 +61,6 @@ body {
 
   .feature {
       width: 200px;
+      float:left;
+      margin-right: 20px;
   }
