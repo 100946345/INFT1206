@@ -1,11 +1,12 @@
 
 
-
 body {
     background-color: #fff;
+    font-style: italic;
     color: #333;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+
   }
 
   img {
@@ -18,12 +19,16 @@ body {
     padding: 50px 20px;
     margin: 0 auto;
     max-width: 980px;
+    font-weight: bold;
+    font-style: italic;
   }
   
   .grid {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display: flex;
+
   }
   
   nav {
