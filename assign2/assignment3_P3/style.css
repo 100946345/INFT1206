@@ -66,3 +66,24 @@ p{
     padding: 25;
 
 }
+
+a {
+    color: #a66; 
+    
+  }
+  
+  a:visited{
+    color: red
+  }
+  
+  a:hover{
+    color:red
+  }
+  
+  a:focus{
+    color:yellow
+  }
+
+  a.external-link {
+    background-image: url('img/external-link-52.png');
+  }
