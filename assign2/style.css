@@ -2,5 +2,21 @@
 html {
     font-family: sans-serif;
   }
-  
+
   /* Your CSS below here */
+  div{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    font-size: 1.125rem;
+
+
+
+
+
+
+  }
