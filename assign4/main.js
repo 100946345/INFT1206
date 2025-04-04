@@ -1,3 +1,12 @@
+/*
+	Name: Manuel Antunes
+	File: Part_1.html
+	Date: 04 April 2025
+  In this project, I combined HTML, CSS, and JavaScript to create an interactive interface where users can generate a 
+  silly story with each button press, customize the name, and convert UK weight and temperature units to US equivalents.	
+  
+  */
+
 
 // 1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS
 
