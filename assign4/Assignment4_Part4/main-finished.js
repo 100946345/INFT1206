@@ -117,19 +117,27 @@ class EvilCircle extends Shape {
           });
     }
 
-}
+
 
 draw() {
     ctx.beginPath();
-    lineWidth = 5
+    ctx.lineWidth = 5;
     ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
   }
 
 
-  
 
+  checkBounds()  {
+    if (this.x + this.size >= width || (this.x - this.size) <= 0) {
+        this.x = width - this.size;
+    }
+
+    if ((this.y + this.size) >= height || (this.y - this.size) <= 0) {
+        this.y = height - this.size;}
+  }
+}
 
 
 const balls = [];
