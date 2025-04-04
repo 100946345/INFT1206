@@ -174,13 +174,15 @@ while (balls.length < 25) {
     // away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
-    random(-7, 7),
-    random(-7, 7),
+    random(-4, 4),
+    random(-4, 4),
     randomRGB(),
     size
   );
 
   balls.push(ball);
+  count++; 
+  para.textContent = "Ball count: " + count;
 }
 
 const evilBall = new EvilCircle(width / 2, height / 2);
@@ -190,37 +192,16 @@ function loop() {
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
+    if (ball.exists) {
     ball.draw();
     ball.update();
     ball.collisionDetect();
-  }
-
-  evilBall.draw();
-  requestAnimationFrame(loop);
+        }
+    }
+    evilBall.draw();
+    evilBall.checkBounds();
+    evilBall.collisionDetect();
+    requestAnimationFrame(loop);
 }
- 
-while (balls.length < 25) {
-    const size = random(10, 20);
-    const ball = new Ball(
-      random(0 + size, width - size),
-      random(0 + size, height - size),
-      random(-7, 7),
-      random(-7, 7),
-      randomRGB(),
-      size
-    );
-  
-    balls.push(ball);
-    count++; // Increment count as balls are created
-    para.textContent = "Ball count: " + count;
-}
-
-
-evilBall.draw();
-evilBall.checkBounds();
-evilBall.collisionDetect();
-
-requestAnimationFrame(loop);
-
 
 loop();
