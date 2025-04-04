@@ -17,6 +17,11 @@ const overlay = document.querySelector('.overlay');
 const images = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"];
 
 /* Declaring the alternative text for each image file */
+const alts = {"pic1.jpg" : "Closeup of an eye",
+    "pic2.jpg" : "Rocks with wavy shapes",
+    "pic3.jpg" : "Purple and white flowers",
+    "pic4.jpg" : "Ancient Egyptian art",
+    "pic5.jpg" : "A moth on a green leaf"}
 
 /* Looping through images */
 
