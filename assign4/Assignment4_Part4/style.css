@@ -5,7 +5,7 @@
 	Date: 04 April 2025
     In this final project, I expanded on my previous bouncing balls demo by adding new features, including a user-controlled "evil" 
     circle and a score counter to track remaining balls.
-      
+
 */
 
 html, body {
@@ -32,4 +32,12 @@ html, body {
   
     color: transparent;
     text-shadow: 0 0 4px white;
+  }
+
+  p {
+    position: absolute;
+    margin: 0;
+    top: 35px;
+    right: 5px;
+    color: #aaa;
   }

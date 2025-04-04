@@ -18,6 +18,9 @@ const height = (canvas.height = window.innerHeight);
 
 // function to generate random number
 
+const para = document.querySelector("#ball-count");
+let count = 0;
+
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -51,6 +54,7 @@ class Ball extends Shape {
 
 
   draw() {
+    if (!this.exists) return;
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -130,13 +134,18 @@ draw() {
 
 
   checkBounds()  {
-    if (this.x + this.size >= width || (this.x - this.size) <= 0) {
+    if (this.x + this.size >= width) 
         this.x = width - this.size;
-    }
+    if (this.x - this.size <= 0) 
+        this.x = this.size;
+    if (this.y + this.size >= height)  
+        this.y = height - this.size;
+    if (this.y - this.size <= 0) 
+        this.y = this.size;
+}
 
-    if ((this.y + this.size) >= height || (this.y - this.size) <= 0) {
-        this.y = height - this.size;}
-  }
+
+
   collisionDetect(){
     for (const ball of balls) {
         if (ball.exists) {
@@ -147,7 +156,7 @@ draw() {
           if (distance < this.size + ball.size) {
             ball.exists = false;
             count--;
-            para.textContent = "Ball Remai - " + count;
+            para.textContent = "Ball Count : " + count;
                     }
                 }
             }
@@ -174,6 +183,8 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+const evilBall = new EvilCircle(width / 2, height / 2);
+
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
@@ -184,7 +195,25 @@ function loop() {
     ball.collisionDetect();
   }
 
+  evilBall.draw();
   requestAnimationFrame(loop);
 }
+ 
+while (balls.length < 25) {
+    const size = random(10, 20);
+    const ball = new Ball(
+      random(0 + size, width - size),
+      random(0 + size, height - size),
+      random(-7, 7),
+      random(-7, 7),
+      randomRGB(),
+      size
+    );
+  
+    balls.push(ball);
+    count++; // Increment count as balls are created
+    para.textContent = "Ball count: " + count;
+}
+
 
 loop();
