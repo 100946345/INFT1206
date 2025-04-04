@@ -1,4 +1,13 @@
 
+/*
+	Name: Manuel Antunes
+	File: main.js
+	Date: 04 April 2025
+    In this project, I combined HTML, CSS, and JavaScript to create an interactive interface where users can generate a 
+    silly story with each button press, customize the name, and convert UK weight and temperature units to US equivalents.	
+  
+  */
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
