@@ -1,4 +1,12 @@
 
+/*
+	Name: Manuel Antunes
+	File: main-finished.js
+	Date: 04 April 2025
+    In this final project, I expanded on my previous bouncing balls demo by adding new features, including a user-controlled "evil" 
+    circle and a score counter to track remaining balls.
+  
+*/
 
 // set up canvas
 
