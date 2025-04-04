@@ -1,4 +1,12 @@
 
+/*
+	Name: Manuel Antunes
+	File: main.js
+	Date: 04 April 2025
+    In this project, I was tasked with using JavaScript to create a classic "bouncing balls" demo. In order to increase our experience of objects in JavaScript
+  
+*/
+
 // setup canvas
 
 const canvas = document.querySelector("canvas");
