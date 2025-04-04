@@ -216,4 +216,11 @@ while (balls.length < 25) {
 }
 
 
+evilBall.draw();
+evilBall.checkBounds();
+evilBall.collisionDetect();
+
+requestAnimationFrame(loop);
+
+
 loop();
