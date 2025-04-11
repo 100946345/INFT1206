@@ -22,11 +22,11 @@
   </head>
 
   <body>
-    <div class="header">
-      <font size="7">Welcome to our wildlife website</font>
-    </div>
+    <header>
+      <h1>Welcome to our wildlife website</h1>
+    </header>
 
-    <div class="nav">
+    <nav>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Our team</a></li>
@@ -34,15 +34,15 @@
         <li><a href="#">Blog</a></li>
       </ul>
 
-      <form class="search">
+      <form class="search" aria-label="Site search">
         <input type="search" name="q" placeholder="Search query">
         <input type="submit" value="Go!">
       </form>
-    </div>
+    </nav>
 
     <main>
       <article>
-        <font size="6">The trouble with Bears</font>
+        <h2>The trouble with Bears</h2>
         <p>By Evan Wild</p>
 
         <p>Tall, lumbering, angry, dangerous. The real live bears of this world are proud, independent creatures, self-serving and always on the hunt for food. Nothing like the bears you see on TV, like Baloo from renowned documentary, The Jungle Book.</p>
@@ -57,7 +57,8 @@
       
 
 
-        <table summary="Interesting facts about bears in both wild and urban environments.">
+        <table> 
+          <caption>Interesting facts about bears in both wild and urban environments.</caption>
           <thead>
             <tr>
               <th scope="col">Bear Type</th>
@@ -72,7 +73,7 @@
         
           <tbody>
             <tr>
-              <th>Wild</th>
+              <th scope="row">Wild</th>
               <td>Brown or black</td>
               <td>1.4 to 2.8 meters</td>
               <td>Woods and forests</td>
@@ -80,7 +81,7 @@
               <td>Fish, meat, plants</td>
             </tr>
             <tr>
-              <th>Urban</th>
+              <th scope="row"></thscope>Urban</th>
               <td>North Face</td>
               <td>18 to 22</td>
               <td>Condos and coffee shops</td>
@@ -98,7 +99,7 @@
         
         <p>Urban (gentrified) bears on the other hand have largely abandoned the old ways. They will hunt other urban creatures if necessary (including other predators like rats and foxes), but prefer to scavenge from readily available urban food outlets like dumpsters, bins, and fast food joints. When food has proven scarce, urban bears have even been known to break into people's kitchens and steal essentials like baked beans, ready meals, and microwave ovens.</p>
 
-        <img src="media/urban-bear.jpg" alt="A caged bear">
+        <img src="media/urban-bear.jpg" alt="A bear behind a cage in an urban environment">
       
         <p>Urban bears will sleep anywhere they can, from bus shelters and parks, to the toilets in McDonalds, to their own apartment.</p>
         
@@ -107,11 +108,11 @@
         
         <p>The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts. </p>
         
-      <audio>
-          <a href="media/bear.mp3" type="audio/mp3">
+      <audio controls>
+          <source src="media/bear.mp3" type="audio/mp3">
           <source src="media/bear.ogg" type="audio/ogg">
-          <p>It looks like your browser doesn't support HTML5 audio players.</p>
-        </audio>
+          <p>Your browser does not support HTML5 audio players. Here is a <a href="bear.mp3">direct link to the audio file</a> instead.</p>
+      </audio>
 
         <aside>
 
@@ -132,7 +133,7 @@
             <form class="comment-form">
               <div class="flex-pair">
                 <label for="name">Your name:</label>
-                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <input type="text" name="name" id="name" placeholder="Enter your name" aria-required="true">
               </div>
               <div class="flex-pair">
                 <label for="comment">Your comment:</label>
@@ -162,7 +163,7 @@
       </article>
 
       <div class="secondary">
-        <font size="6">Related</font>
+        <h2>Related</h2>
 
         <ul>
           <li><a href="#">The trouble with Bees</a></li>
