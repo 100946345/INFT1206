@@ -1,3 +1,11 @@
+/*
+	Name: Manuel Antunes
+	File: main.js
+	Date: 10 April 2025
+	In this project, there are some accessibility issues that I need to correct in order to enhance the visual user interface.
+	*/
+
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
